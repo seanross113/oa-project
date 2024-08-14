@@ -8,7 +8,7 @@ from quadrotor.controller import ControllerBase, QuadrotorCommands
 from quadrotor.trajectory import TrajectoryBase, TrajectoryState
 
 from quadrotor.simulator import SimulatorBase
-from quadrotor.renderer import animate
+from quadrotor.renderer import animate_k3d
 
 
 # Spoofed dynamics
@@ -52,5 +52,5 @@ if __name__ == "__main__":
     output = sim.simulate()
 
     # Render the output
-    ani = animate(output)
+    ani = animate_k3d(output)
     plt.show()
